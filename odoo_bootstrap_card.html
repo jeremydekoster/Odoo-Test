@@ -10,10 +10,10 @@
 
   <body>
 
-    <div class="container">
-      <h1>Bootstrap Card Test</h1>
+    <div class="container vh-100">
+      <h1 class="my-4 text-center">Bootstrap Card Test</h1>
       
-      <div class="card">
+      <div class="card m-auto border-0">
         <div class="card-header">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item me-2">
@@ -31,16 +31,16 @@
           </ul>
         </div>
 
-        <div class="card-body p-0 overflow-hidden">
+        <div class="card-body">
 
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active pt-4" id="tab1" role="tabpanel" aria-labelledby="home-tab">
               <h4 class="card-title">Card title</h4>
               <h5 class="card-title text-secondary pb-4">Card subtitle</h5>
 
-              <div class="row m-0 border-top">
+              <div class="row m-0">
                 <div class="col-md-6 p-0">
-                  <div class="list-group list-group-flush h-100 d-flex justify-content-around" id="myList" role="tablist">
+                  <div class="list-group list-group-flush pe-3 h-100 d-flex justify-content-around" id="myList" role="tablist">
                     <a class="list-group-item list-group-item-action active p-4" data-toggle="list" href="#home" role="tab">An item</a>
                     <a class="list-group-item list-group-item-action p-4" data-toggle="list" href="#profile" role="tab">A second item</a>
                     <a class="list-group-item list-group-item-action p-4" data-toggle="list" href="#messages" role="tab">A third item</a>
@@ -57,10 +57,9 @@
             </div>
 
             <div class="tab-pane fade text-center pt-5 pb-5" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
-              <h5>Loading...</h5>
-              <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="spinner-border">
-                <circle cx="200" cy="200" fill="none" r="100" stroke-width="20" stroke="#000000" stroke-dasharray="350 1400" stroke-linecap="round" />
-              </svg>
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only"></span>
+              </div>
             </div>
 
             <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="contact-tab">
