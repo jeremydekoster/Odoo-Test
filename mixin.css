@@ -1,0 +1,19 @@
+@import "css/bootstrap.min.css";
+@import "custom.css";
+
+$clr-primary: var(--bs-purple);
+$clr-secondary: var(--bs-teal);
+
+@mixin color-scheme () {
+	background-color: $clr-primary;
+	color: $clr-secondary;
+}
+
+.testtest1 {
+	@include color-scheme;
+}
+
+.testtest2 {
+	background-color: var(--bs-indigo);
+	color: var(--bs-purple);
+}
