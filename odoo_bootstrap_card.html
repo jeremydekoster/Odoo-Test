@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Card</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1>Bootstrap Card Test</h1>
+      
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item me-2">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="home" aria-selected="true">Tab 1</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile" aria-selected="false">Tab 2</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" id="contact-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact" aria-selected="false">Tab 3</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="false">Disabled</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-body p-0 overflow-hidden">
+
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active pt-4" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+              <h4 class="card-title">Card title</h4>
+              <h5 class="card-title text-secondary pb-4">Card subtitle</h5>
+
+              <div class="row m-0 border-top">
+                <div class="col-md-6 p-0">
+                  <div class="list-group list-group-flush h-100 d-flex justify-content-around" id="myList" role="tablist">
+                    <a class="list-group-item list-group-item-action active p-4" data-toggle="list" href="#home" role="tab">An item</a>
+                    <a class="list-group-item list-group-item-action p-4" data-toggle="list" href="#profile" role="tab">A second item</a>
+                    <a class="list-group-item list-group-item-action p-4" data-toggle="list" href="#messages" role="tab">A third item</a>
+                  </div>
+                </div>
+                <div class="col-md-6 m-0 p-0">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="home" role="tabpanel"><img src="img/pic-1.png" alt="Pic 1" class="w-100"></div>
+                    <div class="tab-pane" id="profile" role="tabpanel"><img src="img/pic-2.png" alt="Pic 2" class="w-100"></div>
+                    <div class="tab-pane" id="messages" role="tabpanel"><img src="img/pic-3.png" alt="Pic 3" class="w-100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade text-center pt-5 pb-5" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
+              <h5>Loading...</h5>
+              <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" class="spinner-border">
+                <circle cx="200" cy="200" fill="none" r="100" stroke-width="20" stroke="#000000" stroke-dasharray="350 1400" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="contact-tab">
+              <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="img/pic-4.png" class="card-img h-100 rounded-0" alt="Pic 4">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title p-0">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="card-footer">
+          2 days ago
+        </div>
+
+      </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+  $('#myList a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+
+  $('#myTab a').on('click', function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
+</script>
+
+</body>
+
+</html>
